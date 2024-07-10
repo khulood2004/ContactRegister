@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contacts Register</title>
+    <style>
+      /* Add your CSS here */
+    </style>
+  </head>
+  <body>
+    <h1>Contacts Register</h1>
+    <div id="contact-form">
+      <input type="text" id="contact-name" placeholder="Contact Name" />
+      <input type="text" id="contact-phone" placeholder="Phone Number" />
+      <label for="addToGroup">Add to Group:</label>
+      <input type="checkbox" id="addToGroup" onchange="toggleGroupOptions()" />
+      <div id="group-options" style="display: none;">
+        <input type="text" id="group-name" placeholder="Group Name" />
+        <button onclick="addContactToGroup()">Add to Group</button>
+      </div>
+      <button onclick="addContact()">Add Contact</button>
+    </div>
+    <div id="contacts-list">
+      <ul id="contacts"></ul>
+    </div>
+    <div id="total-contacts">
+      Total Contacts: <span id="contact-count">0</span>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
+</html>
